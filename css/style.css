@@ -1,0 +1,173 @@
+/*universal css styling*/
+       *{
+			padding:0;
+			margin:0;
+			box-sizing: border-box;
+		}
+/* for basic styling*/
+		body{
+		  font-family: sans-serif;
+		  color:white;
+		}
+		a{
+			cursor: pointer;
+			color:inherit;
+			text-decoration: none;
+		}
+		ul,li{
+			list-style: none;
+		}
+		/*for heading stying*/
+		header{
+			padding:0 100px;
+			width:100%;
+			height: 80px;
+			position: fixed;
+			top: 0;
+			left: 0;
+		}
+		header .navbar{
+			display:flex;
+			justify-content:space-between;
+			align-items:center;
+		
+		}
+		.nav-brand{
+			font-size: 2em;
+			font-weight: 700px;
+			text-transform: uppercase;
+			cursor: pointer;
+		}
+		.nav-brand span{
+			color:#27fb6b;
+		}
+		.humburger{
+			font-size: 24px;
+			line-height: 80px;
+			display: none;
+			cursor: pointer;
+			padding:5px;
+		}
+		/* =======================close button===============================*/
+		.close{
+			position: absolute;
+			top: 15px;
+			right: 30px;
+			font-size: 2em;
+			font-weight:bold;
+			cursor: pointer;
+			display: none;
+		}
+		.active{
+			background: #27fb6b;
+			padding:5px 15px;
+		}
+		.nav-menu{
+			display: flex;
+		}
+		.nav-item{
+			margin-left: 30px;
+		}
+		.nav-link{
+			line-height: 80px;
+			font-size: 18px;
+			font-weight: 500px;
+			text-transform: capitalize;
+		}
+		.nav-link:hover{
+			color:#27fb6b;
+		}
+		.active:hover,.active{
+			color:white;
+		}
+		/*======================banner area==================== */
+	    .banner{
+	    	padding:40px 100px;
+	    	max-width: 100%;
+	    	height: 100vh;
+	    	background:#0a2e36;
+	    	/*background: url('img/pexels-drew-williams-2453658.jpg') center;*/
+	    	display: flex;
+	    	justify-content: center;
+	    	align-items: center;
+	    	text-align:center;
+	    	flex-direction:column;
+	    	z-index: -1;
+	    	transition: background .3s;
+	    }
+	    .sm-title{
+	    	font-size: 18px;
+	    	font-weight: 300px;
+	    }
+	    .hero-title{
+	    	font-size: 4em;
+	    	font-weight: 800px;
+	    	margin-bottom: 10px;
+	    }
+	    .subtitle{
+	    	font-weight: 300px;
+	    	font-size: 18px;
+	    }
+	    .call-to-action{
+	    	margin-top:30px;
+	    	display:inline-block;
+	    	padding:10px 40px;
+	    	background: #27fb6b;
+	    	font-size: 18px;
+	    }
+	    /*styling for sticky header*/
+	    .sticky{
+	    	background: white;
+	    	color:black;
+	    }
+	    
+/* ======================responsive header using media query==================================*/
+@media (max-width:900px ){
+      header{
+      	padding:0 50px;
+      }
+      @media (max-width:400px ){
+      header{
+      	padding:0 30px;
+      }
+}
+/* ======================responsive header using media query==================================*/
+@media (max-width:792px ){
+	.humburger{
+		display: block;
+	}
+	.nav-brand{
+			font-size: 1.5em;
+		}
+     .nav-menu{
+     	position: absolute;
+     	top:0;
+        left: 0;
+     	display: block;
+     	color:#303030;
+     	background: white;
+     	height: 100vh;
+     	width: 80%;
+     	padding-top:100px;
+     	display: none;
+     
+
+     }
+     .nav-item{
+     	display: block;
+     	margin:0;
+     	text-align: center;
+     }
+     .banner{
+     	padding:110px 30px;
+     }
+      .hero-title{
+      	font-size: 3em;
+      }
+      .active-nav-menu{
+      	display: block;
+      }
+      .close{
+      	display: block;
+      }
+}
